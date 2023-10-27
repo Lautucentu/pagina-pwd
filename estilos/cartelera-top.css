@@ -1,0 +1,328 @@
+html
+{
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+}
+*,
+*::before,
+*::after
+{
+  box-sizing: inherit;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#090114,#4d0baa,#430c75);
+    background-attachment: fixed;
+	  background-repeat: no-repeat;
+	  background-size: 100% 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 7% auto;
+    position: relative;
+}
+nav 
+{
+  z-index: 999;
+  grid-row: 1/2;
+  grid-column: 1/4;
+  color: #fff; /* color del texto */
+  padding: 5px; /* añadir espacio interno */
+  background-color: #0d0d0d73;
+  position: sticky;
+  top: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  /* gap: 60%; */
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+.barra-negra
+{
+ grid-row: 1/2;
+ grid-column: 1/4;
+ background-color: #0D0D0D;
+ border-bottom-left-radius: 5px;
+ border-bottom-right-radius: 5px;
+}
+/* === removing default button style ===*/
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: rgba(201, 187, 187, 0.6);
+  --animation-color: #8806df;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+.menu-logo
+{
+  width: 300px;
+  display: flex;
+  align-items: baseline;
+  gap: 20%;
+}
+.login-nav
+{
+  display: flex;
+  float: right;
+  width: 200px;
+}
+/* botones de inicio y register */
+.buti {
+  font-size: 10px;
+  color: #e1e1e1;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+.buti:focus,
+.buti:hover {
+  color: #fff;
+}
+
+.buti:focus:after,
+.buti:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.buti:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+/* fin nav */
+/* listas */
+.ul 
+{
+  list-style-type: none; /* quitar las viñetas de la lista */
+  margin: 0;
+  padding: 0;
+}
+
+.li 
+{
+  display: inline; /* mostrar elementos en línea */
+  /* margin-right: 10px; /* añadir espaciado entre elementos 
+  margin-top: 10px;
+  padding: 5px;
+  height: 222px;
+  width: 150px; */
+}
+/* fin listas */
+a 
+{
+  color: #fff; /* color del enlace */
+  text-decoration: none; /* quitar subrayado */
+}
+/* main */
+main{
+    /* height: auto; */
+    height: min-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    flex-flow: column nowrap;
+    gap: 10px;
+    padding: 1em;
+
+}
+#coleccion-pelis
+{
+    
+    backdrop-filter:blur(10px);
+    background-color: #72727233;
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-flow: row wrap;
+    padding: 1em;
+    gap: 30px;
+
+}
+.pelis
+{
+ width: 150px; 
+ height: 222px;
+ border: solid 3px wheat;
+ margin: 5%;
+}
+#siguiente
+{
+    margin-left: 50px;
+}
+.botones
+{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+/* tarjetas */
+.card {
+  position: relative;
+  width: 150px; 
+  height: 222px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  
+  
+}
+
+.card img {
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #727272;
+  backdrop-filter:blur(20px);
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.card__content::-webkit-scrollbar 
+{
+  width: 0px;
+}
+
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card__title {
+  margin: 0;
+  font-size: 20px;
+  color: #520047;
+  font-weight: 700;
+}
+
+.card:hover img {
+  scale: 0;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.4;
+}
+/* fin de tarjetas */
+.but {
+  background-color: #ffffff00;
+  color: #fff;
+  width: 8.5em;
+  height: 2.9em;
+  border: #3654ff 0.2em solid;
+  border-radius: 11px;
+  text-align: right;
+  transition: all 0.6s ease;
+}
+
+.but:hover {
+  background-color: #3654ff;
+  cursor: pointer;
+}
+
+.but svg {
+  width: 1.6em;
+  margin: -0.2em 0.8em 1em;
+  position: absolute;
+  display: flex;
+  transition: all 0.6s ease;
+}
+
+.but:hover svg {
+  transform: translateX(3px);
+}
+
+.text {
+  margin: 0 2.5em
+}
+/* fin de main */

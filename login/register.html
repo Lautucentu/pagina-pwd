@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stilo_registro.css">
+    <title>registro•Cinema</title>
+</head>
+<body>
+  <nav>
+    <div class="menu-logo">
+    <a href="../index.html">
+      <button class="button" data-text="Awesome">
+        <span class="actual-text">&nbsp;cinema&nbsp;</span>
+        <span aria-hidden="true" class="hover-text">&nbsp;cinema&nbsp;</span>
+      </button>
+    </a>
+ 
+    </div>
+    <div class="login-nav">
+        <button class="buti">
+            <a href="register.html">Registrarse</a>
+        </button>
+        <button class="buti">
+            <a href="login.html">iniciar sesion</a>
+        </button>
+    </div>
+  </nav>
+
+    <div class="login-container">
+        <form action="../todophp/register.php" method="post">
+            <h1>registro</h1>
+        <div class="form-group">
+            <input class="input" type="text" id="nombre" name="nombre" placeholder="nombre" required>
+        </div>
+        <div class="form-group">
+            <input class="input" type="password" id="contraseña" name="contraseña" placeholder="contraseña" required>
+        </div>
+        <div>
+          <input class="boton" type="submit" value="registrarme">
+        </div>
+        </form>
+    </div>
+</body>
+</html>
