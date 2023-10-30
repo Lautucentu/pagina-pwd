@@ -49,7 +49,7 @@ var options = {
 function fetchNew (valor){
   if(miURL.includes("cartelera.html"))
   {
-    fetch('https://api.themoviedb.org/3/movie/now_playing?language=es-AR&page='+valor+'&region=ar', options)
+    fetch('https://api.themoviedb.org/3/movie/now_playing?language=es-AR&page='+valor, options)
       .then(response => response.json())
       .then(response => 
         {

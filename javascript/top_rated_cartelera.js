@@ -49,7 +49,7 @@ var options = {
     Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0OGJlNTMzODY5ZTkwYzc1YzM0Nzk0N2UzZTM4YzQ2ZiIsInN1YiI6IjY1MzZkYTRlOTQ2MzE4MDBjNmI1NGU2ZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ZWgW19RmAa8if-jOz_6HzINBtHJwl_yWJecn8MD_U_8'
   }
 };
-fetch('https://api.themoviedb.org/3/movie/now_playing?language=es-AR&page=1&region=ar', options)
+fetch('https://api.themoviedb.org/3/movie/now_playing?language=es-AR&page=1', options)
 .then(response => response.json())
 .then(response => cartelera(response))
 .catch(err => console.error(err));
