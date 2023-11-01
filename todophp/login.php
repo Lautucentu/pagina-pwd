@@ -23,7 +23,7 @@ if ($result->num_rows == 1) {
     {
         $_SESSION['usuario_id'] = $row['id'];
         $_SESSION['usuario_nombre'] = $row['nombre'];
-        header("Location: ../mipaginaweb.html"); // Redirigir al usuario a la página de inicio
+        header("Location: ../index.html"); // Redirigir al usuario a la página de inicio
         exit;
     } else {
         echo "Contraseña incorrecta. <a href='../login/login.html'>Intentar de nuevo</a>";
