@@ -21,8 +21,8 @@ if ($result->num_rows == 1) {
     $row = $result->fetch_assoc();
     if (password_verify($password, $row['contraseña'])) 
     {
-        $_SESSION['usuario_id'] = $row['id'];
-        $_SESSION['usuario_nombre'] = $row['nombre'];
+        //$_SESSION['usuario_id'] = $row['id'];
+        //$_SESSION['usuario_nombre'] = $row['nombre'];
         header("Location: ../index.html"); // Redirigir al usuario a la página de inicio
         exit;
     } else {
