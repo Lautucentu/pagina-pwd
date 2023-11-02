@@ -18,6 +18,7 @@ var completo = (response) => {
       img.className = "pelis";
       img.src = "https://image.tmdb.org/t/p/w500/" + pelicula.poster_path;
       img.alt = pelicula.title;
+      img.loading="lazy";
       const card_cont=document.createElement("div")
       card_cont.classList.add("card__content");
       const titulo_card = document.createElement("p");
@@ -47,6 +48,17 @@ var options = {
 
 
 function fetchNew (valor){
+  document.getElementById("coleccion-pelis").innerHTML=`
+    <div class="wrapper">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="shadow"></div>
+      <div class="shadow"></div>
+      <div class="shadow"></div>
+    </div>
+  `;
+
   if(miURL.includes("cartelera.html"))
   {
     fetch('https://api.themoviedb.org/3/movie/now_playing?language=es-AR&page='+valor, options)
@@ -77,9 +89,10 @@ function fetchNew (valor){
 
 boton.addEventListener("click",()=>{
   if(num < pages){
-    num++;
+    num++; 
   }
   fetchNew(num);
+  document.documentElement.scrollTo=0;
 });
 boton2.addEventListener("click",()=>
 {
