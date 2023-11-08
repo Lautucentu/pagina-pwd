@@ -11,7 +11,7 @@
     <div class="barra-negra"></div><!--barra de nav negra-->
   <nav>
     <div class="menu-logo">
-    <a href="index.html">
+    <a href="index.php">
       <button class="button" data-text="Awesome">
         <span class="actual-text">&nbsp;cinema&nbsp;</span>
         <span aria-hidden="true" class="hover-text">&nbsp;cinema&nbsp;</span>

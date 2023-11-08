@@ -12,7 +12,7 @@
 <div class="barra-negra"></div><!--barra de nav negra-->
   <nav>
     <div class="menu-logo">
-    <a href="index.html">
+    <a href="index.php">
       <button class="button" data-text="Awesome">
         <span class="actual-text">&nbsp;cinema&nbsp;</span>
         <span aria-hidden="true" class="hover-text">&nbsp;cinema&nbsp;</span>
@@ -41,14 +41,14 @@
       </ul>
     </div>
     <div class="top-completo">
-      <a href="mejores_valoradas.html">Top completo ></a>
+      <a href="mejores_valoradas.php">Top completo ></a>
     </div>
   </aside>
   <!-- main -->
 <div class="text-y-cartelera">
   <div class="cartelera">
     <span class="originalText">En cartelera</span>
-    <span class="nuevoText"><a href="cartelera.html">ver todo ></a></span>
+    <span class="nuevoText"><a href="cartelera.php">ver todo ></a></span>
   </div>
     <div id="carouselExample" class="carousel slide">
       <div id="hola" class="carousel-inner">
