@@ -29,15 +29,15 @@ if ($result->num_rows == 1) {
     {
         echo "
         <script>
-          alert('Usuario inexistente');
-          window.location = 'todophp/login.php';
+          alert('contraseña incorrecta');
+          window.location = 'login.php';
         </script>";
     }
 } else {
     echo "
     <script>
       alert('Usuario no registrado');
-      window.location = 'todophp/register.php';
+      window.location = 'register.php';
     </script>";}
 
 // Cerrar la conexión

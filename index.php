@@ -24,7 +24,7 @@
         <a href="login/register.html">Registrarse</a>
     </button>
     <button class="buti">
-        <a href="login/login.html">iniciar sesion</a>
+        <a href="login/login.php">iniciar sesion</a>
     </button>
     </div>
   </nav>
