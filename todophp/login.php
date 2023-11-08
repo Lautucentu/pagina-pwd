@@ -34,8 +34,11 @@ if ($result->num_rows == 1) {
         </script>";
     }
 } else {
-    echo "Usuario no registrado. <a href='../login/register.html'>Registrarse</a>";
-}
+    echo "
+    <script>
+      alert('Usuario no registrado');
+      window.location = 'register.php';
+    </script>";}
 
 // Cerrar la conexión
 $conexion->close();
