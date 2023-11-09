@@ -30,14 +30,14 @@ if ($result->num_rows == 1) {
         echo "
         <script>
           alert('contraseña incorrecta');
-          window.location = 'login.html';
+          window.location = '../login/login.html';
         </script>";
     }
 } else {
     echo "
     <script>
       alert('Usuario no registrado');
-      window.location = 'register.html';
+      window.location = '../login/register.html';
     </script>";}
 
 // Cerrar la conexión
