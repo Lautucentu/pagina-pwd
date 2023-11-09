@@ -29,7 +29,7 @@
     <div class="login-container">
         <h1>Iniciar Sesión</h1>
 
-        <form action="login.php" method="post">
+        <form action="/todophp/login.php" method="post">
             <div class="form-group">
                 <input class="input" type="text" id="nombre" name="nombre" placeholder="nombre de usuario" required>
             </div>
@@ -41,15 +41,5 @@
             <input class="boton" name="btn-s" type="submit" value="Iniciar Sesión">
         </form>
     </div>
-    <?php
-        if($alert){
-            echo '
-            <div class="alert alert-secondary" role="alert">
-                A simple secondary alert—check it out!
-            </div>   
-            ';
-        }
-    
-    ?>
 </body>
 </html>
