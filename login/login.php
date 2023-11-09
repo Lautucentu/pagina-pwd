@@ -1,5 +1,8 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 session_start();
+$alert =false;
 if(isset($_REQUEST["btn-s"])){
 
     // Conexión a la base de datos
@@ -35,15 +38,14 @@ if(isset($_REQUEST["btn-s"])){
             </script>";
         }
     } else {
-        echo "
-        <script>
-          alert('Usuario no registrado');
-          window.location = 'register.php';
-        </script>";}
+        $alert =true;
     
     // Cerrar la conexión
     $conexion->close();
+    }
 }
+    
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -76,7 +78,7 @@ if(isset($_REQUEST["btn-s"])){
     <div class="login-container">
         <h1>Iniciar Sesión</h1>
 
-        <form method="post">
+        <form action="login.php" method="post">
             <div class="form-group">
                 <input class="input" type="text" id="nombre" name="nombre" placeholder="nombre de usuario" required>
             </div>
@@ -88,5 +90,15 @@ if(isset($_REQUEST["btn-s"])){
             <input class="boton" name="btn-s" type="submit" value="Iniciar Sesión">
         </form>
     </div>
+    <?php
+        if($alert){
+            echo '
+            <div class="alert alert-secondary" role="alert">
+                A simple secondary alert—check it out!
+            </div>   
+            ';
+        }
+    
+    ?>
 </body>
 </html>
