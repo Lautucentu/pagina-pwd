@@ -59,7 +59,7 @@ function fetchNew (valor){
     </div>
   `;
 
-  if(miURL.includes("cartelera.html"))
+  if(miURL.includes("cartelera.php"))
   {
     fetch('https://api.themoviedb.org/3/movie/now_playing?language=es-AR&page='+valor, options)
       .then(response => response.json())
