@@ -9,11 +9,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $servidor = "localhost";
     $usuario = "lauty";
     $contrasena = "1234";
-    $basededatos = "personas";
+    $basededatos = "pdw";
 
     $conexion = mysqli_connect($servidor, $usuario, $contrasena, $basededatos) or die("error");
 
-    $sql = "INSERT INTO usuarios (usuario, contraseña) VALUES ('$nombre', '$contra')";
+    $sql = "INSERT INTO usuarios (nombre, contraseña) VALUES ('$nombre', '$contra')";
 
 
    if ($conexion->query($sql) === TRUE) 

@@ -2,14 +2,14 @@
 
 session_start();
 
-if(!isset($_SESSION['usuario'])){
+if(!isset($_SESSION['nombre'])){
     echo "
         <script>
             alert('Por favor debes iniciar sesion');
-            window.location = 'index.php';
+            window.location = 'login/login.html';
         </script>
     ";
-    header("location: index.php");
+    header("location: login/login.html");
     session_destroy();
     die();
 }

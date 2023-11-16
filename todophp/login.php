@@ -2,7 +2,7 @@
 session_start();
 
 // Conexión a la base de datos
-$conexion = new mysqli("localhost", "lauty", "1234", "personas");
+$conexion = new mysqli("localhost", "lauty", "1234", "pdw");
 
 // Verificar la conexión
 if ($conexion->connect_error) {
@@ -14,14 +14,14 @@ $user = $_POST['nombre'];
 $password = $_POST['contraseña'];
 
 // Buscar al usuario en la base de datos
-$sql = "SELECT * FROM usuarios WHERE usuario='$user'";
+$sql = "SELECT * FROM usuarios WHERE nombre='$user'";
 $result = $conexion->query($sql);
 
 if ($result->num_rows == 1) {
     $row = $result->fetch_assoc();
     if (password_verify($password, $row['contraseña'])) 
     {
-        $_SESSION['usuario'] = $user;
+        $_SESSION['nombre'] = $user;
         header("Location: ../index.php"); // Redirigir al usuario a la página de inicio
         exit;
     }
